@@ -1,0 +1,68 @@
+/* index.css */
+/* 시작 레이아웃 요소 가운데 배치하는 법 3가지 */
+/* 1. text-align : text-align:center; -> text-align은 인라인 자식, 자손에만 적용(자식, 자손에게 display:inline-block; 추가) */
+/* 2. margin : margin:0 auto; -> auto는 조절되는 웹 크기에 따라 자동으로 변경할 수 있도록 하기 위해(정확한 수치값 입력 불가) */
+/* 3. flex : display:flex; justify-content:center;*/
+body {
+    background-color:#f5f5f5;
+    /* width:150vh; height:150vh; */
+}
+main {
+    margin:0 auto;
+    background-image:url(../images/bg.jpg);
+    width:402px; min-height:874px;/* 피그마의 '최소 높이'와 동일 */
+    background-size:100% auto;/* w h (px or %) */
+    background-position:center;/* x y (px or % or 방향) */
+}
+main .title {
+    text-align:center;
+    padding-top:150px;
+    margin-bottom:198px;/* 간격 부여 시 먼저 시작한 형제 태그에 부여 */
+}
+main .title p {
+    margin-bottom:8px;
+    font-size:0.75em;
+    letter-spacing:-0.02m;
+}
+main .title h1 {
+    font-size:1.5em;
+    font-weight:600;
+    letter-spacing:-0.02em;
+}
+main .contents {
+    display:flex;
+    flex-flow:column nowrap;
+    /* column(메인축-수직) nowrap(메인축 방향으로 줄바꿈 안함) */
+    align-items:center;
+    /* 메인축(수직)의 반대 교차축(수평)이 1줄 일때 가운데 정렬 */
+    gap:6px;
+    /* flex 설정 시 자식 사이 간격(자식에 주는 margin과 효과 동일) */
+    /* flex를 설정한 부모의 자식이 인라인일 경우, 자식이 자동으로 블록으로 인식된다. */
+}
+main .contents > * {
+    width:300px; height:42px;
+    border-radius:8px;
+    letter-spacing:-0.02em;
+
+}
+main .contents #user_birthday {/* input 태그 입력 후 상태 */
+    background-color:#fff;
+    border:1px solid #000;
+    text-align:center;
+    font-size:0.875em;
+    color:#000;/* 사용자가 입력했을 때 글자 색상 */
+}
+/* input 태그의 placeholder(안내문) 전용 선택자 글자 색상 */
+main .contents #user_birthday::placeholder {/* input 태그 입력 전 상태 */
+    color:rgba(0, 0, 0, 0.4);
+}
+/* input 태그가 활성화되었을 때(커서가 들어오고 입력되는 상황) */
+main .contents #user_birthday:focus {
+    border-color:pink;
+}
+/* 버튼 */
+main .contents #birthday_result_btn {
+    background-color:#242424;
+    color:#fff;
+    font-weight:600;
+}
