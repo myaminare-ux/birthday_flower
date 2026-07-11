@@ -1,0 +1,53 @@
+/* home_work.css */
+body {
+    background-color:#f5f5f5;
+}
+main {
+    width:402px; min-height:874px;
+    margin:0 auto;
+    background-image:url(../images/bg.jpg);
+    background-size:100%;
+    background-repeat:no-repeat;
+}
+/* ============================ 타이틀 */
+main .title {
+    padding-top:150px;
+    display:flex;
+    flex-flow:column nowrap;
+    align-items:center;
+    gap:8px;
+}
+main .title * {
+    letter-spacing:-0.02em;
+}
+main .title p {
+    font-size:0.75em;
+}
+main .title h1 {
+    font-size:1.5em;
+    font-weight:600;
+}
+/* ============================ 입력, 결과 폼 */
+main form[name^=content] {}
+main form[name^=content] fieldset[class^=contents] {}
+main form[name^=content] fieldset[class^=contents] * {
+    width:300px; height:42px;
+    border-radius:8px;
+}
+main form[name^=content] fieldset[class^=contents] input[name^=user] {
+    text-align:center;
+    margin-bottom:6px;
+    border:1px solid #000;
+}
+main form[name^=content] fieldset[class^=contents] button[id$=btn] {
+    background-color:#242424;
+    color:#fff;
+}
+/* ============================ 결과 버튼 클릭 시 실행되는 팝업창 */
+main .result_popup {}
+main .result_popup .month {}
+main .result_popup .flower_lang {}
+main .result_popup h2 {}
+main .result_popup h2 em {}
+/* ============================ 결과 팝업 뒷배경 */
+main .popup_bg {}

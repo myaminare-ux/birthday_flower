@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="탄생화, 생일, 생일꽃, 꽃, 꽃말, 탄생화 찾기">
+    <meta name="description" content="당신을 위한 탄생화를 찾아보세요. 생일에 맞는 꽃과 꽃말을 확인하세요.">
+    <title>탄생화 - Find my birth flower</title>
+    <!-- 웹글꼴 -->
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/4008/4008146.png" type="image/x-icon">
+    <!-- 디자인 -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/home_work.css">
+    <!-- js -->
+    <script src="./scripts/home_work.js" defer></script>
+</head>
+<body>
+    <main>
+        <!-- 타이틀 -->
+        <div class="title">
+            <p>The Flower of My Birth Day</p>
+            <h1>나의 탄생화 찾기</h1>
+        </div>
+        <!-- 입력, 결과 버튼 폼 -->
+        <form action="#" method="get" name="contents_frm">
+            <fieldset class="contents_g">
+                <legend>태어난 달 입력 칸</legend>
+                <input type="text" name="user_birth_m" id="user_birth_m" autofocus autocomplete="on" required  maxlength="2" placeholder="태어난 달을 숫자로 입력해주세요">
+                <button type="button" id="result_btn">나의 꽃과 꽃말 만나기</button>
+            </fieldset>
+        </form>
+        <!-- 결과 버튼 클릭 시 실행되는 팝업창 -->
+        <div class="result_popup">
+            <p class="month">Birthday Month 12</p>
+            <p class="flower_lang">꽃말 : 자기애, 자존심, 외로움</p>
+            <h2>당신의 탄생화는 '<em>수선화</em>'입니다.</h2>
+        </div>
+        <!-- 결과 팝업 뒷배경 -->
+        <div class="popup_bg"></div>
+    </main>
+</body>
+</html>
