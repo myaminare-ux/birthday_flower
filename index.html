@@ -3,28 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="생일, 탄생화, 꽃, 꽃말">
-    <meta name="description" content="자신의 생일 탄생화가 궁금하신 분들 어서오세요. 꽃 종류부터 꽃말까지 세세하게 알려드립니다.">
-    <title>나의 탄생화 찾기</title>
+    <meta name="keywords" content="탄생화, 생일, 생일꽃, 꽃, 꽃말, 탄생화 찾기">
+    <meta name="description" content="당신을 위한 탄생화를 찾아보세요. 생일에 맞는 꽃과 꽃말을 확인하세요.">
+    <title>탄생화 - Find my birth flower</title>
+    <!-- 웹글꼴 -->
     <!-- 파비콘 -->
-    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/10157/10157131.png" type="image/x-icon">
-    <!-- 웹 글꼴 -->
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/4008/4008146.png" type="image/x-icon">
     <!-- 디자인 -->
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/index.css">
+    <!-- js -->
+    <script src="./scripts/index.js" defer></script>
 </head>
 <body>
     <main>
+        <!-- 타이틀 -->
         <div class="title">
             <p>The Flower of My Birth Day</p>
             <h1>나의 탄생화 찾기</h1>
-        </div><!-- e:title -->
-        <div class="contents">
-            <input id="user_birthday" placeholder="태어난 달을 숫자로 입력해주세요">
-            <button id="birthday_result_btn">나의 꽃과 꽃말 만나기</button>
-            <!-- a 태그는 클릭 시 다른 페이지로 이동 -->
-            <!-- button 태그 클릭 시 범용 기능 동적 표현 -->
         </div>
+        <!-- 입력, 결과 버튼 폼 -->
+        <form action="#" method="get" name="contents_frm">
+            <fieldset class="contents_g">
+                <legend>태어난 달 입력 칸</legend>
+                <input type="text" name="user_birth_m" id="user_birth_m" autofocus autocomplete="on" required  maxlength="2" placeholder="태어난 달을 숫자로 입력해주세요" onclick="monthClick_show()">
+                <button type="button" id="result_btn" onclick="popupShow()">나의 꽃과 꽃말 만나기</button>
+            </fieldset>
+        </form>
+        <!-- 결과 버튼 클릭 시 실행되는 팝업창 -->
+        <div class="result_popup">
+            <p class="month">Birthday Month 12</p>
+            <p class="flower_lang">꽃말 : 자기애, 자존심, 외로움</p>
+            <h2>당신의 탄생화는<br>'<em>수선화</em>'입니다.</h2>
+        </div>
+        <!-- 결과 팝업 뒷배경 -->
+        <div class="popup_bg" onclick="popupHide()"></div>
     </main>
 </body>
 </html>
