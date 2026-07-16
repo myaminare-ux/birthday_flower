@@ -63,8 +63,8 @@ main form[name^=content] fieldset[class^=contents] button[id$=btn] {
 }
 /* ============================ 결과 버튼 클릭 시 실행되는 팝업창 */
 main .result_popup {
-    background-color:#fff;
-    width:322px; height:223px;
+    background-color:rgba(255, 255, 255, 0.9);
+    width:322px; min-height:223px;
     border-radius:10px;
     display:flex;
     flex-flow:column nowrap;
@@ -88,7 +88,7 @@ main .result_popup h2 {
     line-height:1.5em;
     text-align:center;
 }
-main .result_popup h2 em {
+main .result_popup h2 .flower_type {
     font-size:1em;
 }
 /* ============================ 결과 팝업 뒷배경 */

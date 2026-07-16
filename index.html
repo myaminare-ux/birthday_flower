@@ -26,15 +26,15 @@
         <form action="#" method="get" name="contents_frm">
             <fieldset class="contents_g">
                 <legend>태어난 달 입력 칸</legend>
-                <input type="text" name="user_birth_m" id="user_birth_m" autofocus autocomplete="on" required  maxlength="2" placeholder="태어난 달을 숫자로 입력해주세요" onclick="monthClick_show()">
+                <input type="number" name="user_birth_m" id="user_birth_m" autofocus autocomplete="on" required  maxlength="2" placeholder="태어난 달을 숫자로 입력해주세요" onclick="monthClick_show()"><!-- type의 고유 값이 먹히지 않을 때가 있어서 이는 js로 해야 함 -->
                 <button type="button" id="result_btn" onclick="popupShow()">나의 꽃과 꽃말 만나기</button>
             </fieldset>
         </form>
         <!-- 결과 버튼 클릭 시 실행되는 팝업창 -->
         <div class="result_popup">
-            <p class="month">Birthday Month 12</p>
-            <p class="flower_lang">꽃말 : 자기애, 자존심, 외로움</p>
-            <h2>당신의 탄생화는<br>'<em>수선화</em>'입니다.</h2>
+            <p class="month">Birthday Month <span class="month">12</span></p>
+            <p class="flower_lang">꽃말 : <em class="msg">자기애, 자존심, 외로움</em></p>
+            <h2>당신의 탄생화는<br>'<em class="flower_type">수선화</em>'입니다.</h2>
         </div>
         <!-- 결과 팝업 뒷배경 -->
         <div class="popup_bg" onclick="popupHide()"></div>

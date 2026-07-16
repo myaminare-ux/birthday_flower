@@ -13,6 +13,7 @@ console.log(popup_bg);
 /* 스타일 */
 result_popup.style.display = 'none';
 popup_bg.style.display = 'none';
+user_birth_m.value = 12;
 /* user_birth_m.style.placeholder = '12' ; */
 /* 함수 */
 function popupShow(){
@@ -24,7 +25,7 @@ function popupHide(){
     popup_bg.style.display = 'none';
 }
 function monthClick_show(){
-    user_birth_m.value = '12';
+    user_birth_m.value = 12;
 }
 /* function monthClick_show(){
     user_birth_m.style.placeholder = '12';
